@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <h2>Welcome to the Product Jam Starter Kit</h2>
+        <h2> Ex2 - Web Application </h2>
         <p>
           Feel free to look around, edit the source code and navigate to the
           demos.
