@@ -1,7 +1,7 @@
 @import url("reset.css");
 /* This is a custom font from google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@700&family=Faculty+Glyphic&family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 /* what is :root? https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
 :root {
   /* Define design variables */
@@ -12,7 +12,7 @@
 
   --border-radius: 0.5rem;
 
-  --font-titles: "Rubik", serif;
+  --font-titles: "Faculty Glyphic", serif;
   --font-body: system-ui, sans-serif; /* system-ui matches the user's system font */
 }
 

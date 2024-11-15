@@ -9,13 +9,13 @@ export default function Navbar() {
       </h1>
       <nav>
         <Link href="/">Home</Link>
-        <Link href={COURSE_GITHUB} target="_blank">
+        {/* <Link href={COURSE_GITHUB} target="_blank">
           GitHub
         </Link>
-        {DEMOS_ENABLED ? <Link href="/demos">Demos</Link> : null}
-        <Link href ="/tic-tac-toe">part1-tic-tac-toe</Link>
-        <Link href ="/nasa">part2-nasa</Link>
-
+        {DEMOS_ENABLED ? <Link href="/demos">Demos</Link> : null} */}
+        <Link href ="/tic-tac-toe">TicTacToe </Link>
+        <Link href ="/nasa">Nasa API</Link>
+        <Link href ="/design">part3-design</Link>
       </nav>
     </header>
   );
