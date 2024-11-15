@@ -7,24 +7,51 @@
 
 .square {
   background: #fff;
-  border: 2px solid #333;
+  border: 0.14rem solid #333;
   font-size: 2rem;
   font-weight: bold;
   height: 5rem;
   width: 5rem;
-  display: flex; /* Make the button a flex container */
-  align-items: center; /* Vertically center text */
-  justify-content: center; /* Horizontally center text */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .square:hover {
-  background-color: #d3d3d3; /* Light gray when hovered */
+  background-color: #d3d3d3; 
+}
+
+/* Disable hover effect when there’s a winner */
+.square.no-hover:hover {
+  background-color: transparent; 
+  cursor: not-allowed; 
 }
 
 .status {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   text-align: center; 
+}
+
+.resetButtonContainer {
+  display: flex;
+  justify-content: center; 
+  margin-top: 1.6rem; 
+}
+
+.resetButton {
+  background-color: #2b2d42;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.resetButton:hover {
+  background-color: #4e5176;
 }
