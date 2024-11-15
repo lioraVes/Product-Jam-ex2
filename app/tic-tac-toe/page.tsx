@@ -68,7 +68,7 @@ export default function Board() {
   return (
     <main>
       <div>
-        <h1 className={styles.h1}>Tic Tac Toe Game</h1>
+        <h1 >Tic Tac Toe Game</h1>
         <div className={styles.status}>{status}</div>
         <div className={styles.board}>
           <div>
