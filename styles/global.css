@@ -176,3 +176,27 @@ fieldset {
     filter: brightness(80%);
   }
 }
+
+.home-logos {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.home-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.home-content li {
+  margin: 0.5rem 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
