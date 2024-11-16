@@ -9,7 +9,7 @@ function getYouTubeVideoID(url: string): string | null {
   return match ? match[1] : null;
 }
 
-async function getData(count) {
+async function getData(count:number) {
   const response = await fetch(
     `https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}&count=${count}`
   );
