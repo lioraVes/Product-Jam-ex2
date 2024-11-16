@@ -2,6 +2,16 @@
 import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 
+// Define the type for each item in the API response
+interface NasaDataItem {
+  title: string;
+  date: string;
+  explanation: string;
+  url: string;
+  media_type: "image" | "video" | "other"; // The media type will be either "image" or "video"
+}
+
+
 // Function to extract the YouTube Video ID from the URL
 function getYouTubeVideoID(url: string): string | null {
   const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
@@ -19,7 +29,7 @@ async function getData(count:number) {
 }
 
 export default function Nasa() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<NasaDataItem[]>([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
