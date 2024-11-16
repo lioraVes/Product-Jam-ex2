@@ -8,7 +8,7 @@ interface NasaDataItem {
   date: string;
   explanation: string;
   url: string;
-  media_type: "image" | "video" | "other"; // The media type will be either "image" or "video"
+  media_type: "image" | "video" | "other"; 
 }
 
 

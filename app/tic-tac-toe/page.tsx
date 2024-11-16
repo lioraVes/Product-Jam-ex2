@@ -3,7 +3,15 @@
 import styles from "./page.module.css";
 import { useState } from "react";
 
-function Square({ value, onSquareClick, isDisabled }) {
+// Define types for the Square props
+interface SquareProps {
+  value: string | null;
+  onSquareClick: () => void; 
+  isDisabled: boolean; 
+}
+
+
+function Square({ value, onSquareClick, isDisabled }: SquareProps) {
   return (
     <button
       className={`${styles.square} ${isDisabled ? styles.disabled : ""}`} // Add a disabled class for tie/winner
@@ -14,8 +22,7 @@ function Square({ value, onSquareClick, isDisabled }) {
     </button>
   );
 }
-
-function calculateWinner(squares) {
+function calculateWinner(squares: (string | null)[]): string | null {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -36,11 +43,11 @@ function calculateWinner(squares) {
 }
 
 export default function Board() {
-  const [xIsNext, setXIsNext] = useState(true);
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  const [winner, setWinner] = useState(null);
+  const [xIsNext, setXIsNext] = useState<boolean>(true);
+  const [squares, setSquares] = useState<(string | null)[]>(Array(9).fill(null));
+  const [winner, setWinner] = useState<string | null>(null);
 
-  function handleClick(i) {
+  function handleClick(i:number):void {
     if (squares[i] || winner) {
       return;
     }
@@ -55,7 +62,7 @@ export default function Board() {
     }
   }
 
-  const handleReset = () => {
+  const handleReset = ():void => {
     setSquares(Array(9).fill(null));
     setWinner(null);
     setXIsNext(true);
