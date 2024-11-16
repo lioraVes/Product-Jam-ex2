@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 
 // Function to extract the YouTube Video ID from the URL
-function getYouTubeVideoID(url) {
+function getYouTubeVideoID(url: string): string | null {
   const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
   const match = url.match(regex);
   return match ? match[1] : null;
