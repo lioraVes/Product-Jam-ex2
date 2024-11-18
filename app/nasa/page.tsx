@@ -35,7 +35,7 @@ export default function Nasa() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const fetchedData = await getData(10);
+        const fetchedData = await getData(6);
         setData(fetchedData);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -47,7 +47,7 @@ export default function Nasa() {
   }, []);
 
   if (isLoading) {
-    return <main>Loading The Data...</main>;
+    return <main className={styles.centered}>Loading The Data...</main>;
   }
 
   return (
