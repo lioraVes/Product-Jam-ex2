@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bebas+Neue&family=Comfortaa:wght@700&family=Faculty+Glyphic&family=Fredoka:wght@300..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.designContent {
+  font-family: 'Assistant', sans-serif; /* Set Assistant as the font */
+
+  background-color: black; /* Set the background color */
+  min-height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column;
+  align-items: center; /* Center all child elements horizontally */
+  justify-content: center; /* Center all child elements vertically */
+  text-align: center; 
+  direction: rtl; /* Set the text direction to right-to-left */
+  color: white;
+  padding: 20px; /* Add padding to prevent overflow on smaller screens */
+}
+
+.hey {
+  margin-bottom: 20px; /* Add spacing between sections */
+}
+
+.text, .login {
+  max-width: 254px; /* Limit the width of the text */
+  width: 100%; /* Ensure it doesn't exceed the parent's width */
+  text-align: center; /* Center the text within the div */
+  font-size: 14px;
+
+}
+
+.welcome{
+  font-size: 16px;
+}
+
+.intro{
+  font-size: 14px;
+}
