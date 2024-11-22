@@ -1,19 +1,15 @@
 "use client"; // Mark this file as a Client Component
 
 import styles from "./page.module.css";
-import { useRouter } from "next/navigation"; // Import the useRouter hook
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function Design({
-  searchParams,
-}: {
-  searchParams: { message: string };
-}) {
-  const router = useRouter(); // Initialize the router
+export default function Design() {
+  const router = useRouter(); 
 
-  // State for tracking user interactions
   const [emailTouched, setEmailTouched] = useState(false);
   const [passwordTouched, setPasswordTouched] = useState(false);
+
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent form submission
@@ -28,15 +24,15 @@ export default function Design({
 
     if (!emailIsValid) {
       emailInput.placeholder = ":( אימייל לא תקין";
-      emailInput.value = ""; // Clear input field
-      passwordInput.value = ""; // Clear password field
+      emailInput.value = ""; 
+      passwordInput.value = ""; 
       return;
     }
 
     if (password.length === 0) {
       passwordInput.placeholder = "Password required";
-      passwordInput.value = ""; // Clear input field
-      emailInput.value = ""; // Clear input field
+      passwordInput.value = "";  
+      emailInput.value = ""; 
       return;
     }
 
@@ -68,38 +64,25 @@ export default function Design({
         <img src="/greenShape.svg" className={styles.shape2} alt="Shape 2" />
         <img src="/blueShape.svg" className={styles.shape3} alt="Shape 3" />
         <img src="/purpleShape.svg" className={styles.shape4} alt="Shape 4" />
+        <div className={styles.shapeonshapecontainer}>
         <img src="/red_new.svg" className={styles.shape5} alt="Shape 5" />
-        <img src="/green_new.svg" className={styles.shape6} alt="Shape 6" />
+        <img src="/green_new.svg" className={styles.shape6} alt="Shape 6" /> 
+        </div>
       </div>
 
       <div>
         <form className={styles.loginForm} onSubmit={handleSubmit}>
           <label htmlFor="email">
-            <input
-              name="email"
-              placeholder="אימייל"
-              required
-              onBlur={() => setEmailTouched(true)} // Mark email as touched
-              className={emailTouched ? styles.emailTouched : ""}
-            />
+            <input name="email" placeholder="אימייל" onBlur={() => setEmailTouched(true)} 
+              className={emailTouched ? styles.emailTouched : ""} required/>
           </label>
 
           <label htmlFor="password">
-            <input
-              type="password"
-              name="password"
-              placeholder="סיסמה"
-              required
-              onBlur={() => setPasswordTouched(true)} // Mark password as touched
-              className={passwordTouched ? styles.passwordTouched : ""}
-            />
+            <input type="password" name="password" placeholder="סיסמה" onBlur={() => setPasswordTouched(true)}
+              className={passwordTouched ? styles.passwordTouched : ""} required />
           </label>
           <a> כבר יש לי חשבון</a>
           <button>בואו נתחיל!</button>
-
-          {searchParams?.message && (
-            <p className={styles.errorMessage}>{searchParams.message}</p>
-          )}
         </form>
       </div>
     </div>

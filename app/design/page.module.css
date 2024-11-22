@@ -3,18 +3,18 @@
 .designContent {
   font-family: 'Assistant', sans-serif; /* Set Assistant as the font */
 
-  background-color: black; /* Set the background color */
-  min-height: 100vh; /* Full viewport height */
-  display: flex; /* Use flexbox for centering */
+  background-color: black;  
+  min-height: 100vh; 
+  display: flex; 
   flex-direction: column;
-  align-items: center; /* Center all child elements horizontally */
-  justify-content: center; /* Center all child elements vertically */
+  align-items: center; 
+  justify-content: center; 
   text-align: center; 
-  direction: rtl; /* Set the text direction to right-to-left */
+  direction: rtl; 
   color: white;
-  padding: 20px; /* Add padding to prevent overflow on smaller screens */
+  padding: 20px; 
   position: relative; /* Ensure this is positioned relative to its children */
-
+  z-index: 0; 
 }
 
 .hey {
@@ -43,6 +43,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  z-index: 1; /* Ensure the form is interactable */
+
 }
 
 .loginForm input {
@@ -108,6 +110,7 @@
   height: 100%;
   pointer-events: none; /* Prevent the shapes from interfering with clicks */
   overflow: hidden; /* Prevent the shapes from spilling over the content */
+  z-index: -1; /* Ensure it stays behind interactive elements */
 
 }
 
@@ -115,45 +118,50 @@
   position: absolute;
   width: 80px; /* Set the shape size */
   height: 80px;
-  z-index: 0;
 }
 
 /* Shape 1 - Top left */
 .shape1 {
-  top: 10%;
-  left: 20%;
+  top: 10vh;
+  left: 20vw;
   animation: moveAndGrow 3s ease-in-out infinite;
 }
 .shape2{
-  top: 50%;
-  left: 25%;
+  top: 50vh;
+  left: 23vw;
   animation: moveAndGrow 3s ease-in-out infinite;
 }
 .shape3{
-  top: 80%;
-  left: 15%;
+  top: 80vh;
+  left: 15vw;
   animation: moveAndGrow 3s ease-in-out infinite;
 }
 .shape4{
-  top: 80%;
-  left: 80%;
+  top: 80vh;
+  left: 70vw;
   animation: moveAndGrow 3s ease-in-out infinite;
+}
+.shapeonshapecontainer{
+  position: absolute; /* Allows positioning relative to the page */
+  top: 15%; /* Adjust this value for vertical placement */
+  right: 20%; /* Adjust this value for horizontal placement */
+  display: flex;
+  left: 70%;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Disable all pointer events for the shapes */
+
 }
 
 .shape5{
-  top: 7vh;
-  left: 70vw;
-  width: 170px; 
-  height: 170px;
+  width: 10rem; 
+  height: 10rem;
   animation: moveAndGrow 3s ease-in-out infinite;
-
 }
 
 .shape6{
-  top:15vh;
-  left: 73.5vw;
-  width:70px; 
-  height: 70px;
+  width:3rem; 
+  height: 3rem;
   animation: moveAndGrowOpposite 3s ease-in-out infinite;
 
 }
