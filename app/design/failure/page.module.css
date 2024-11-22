@@ -38,23 +38,46 @@
 
 /* Shapes container */
 .shapesContainer {
-  position: absolute;
-  bottom: 10px; /* Position the shapes just above the bottom edge */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
-  display: flex;
-  justify-content: center;
-  z-index: 1; /* Ensure it is above other elements */
+  position: absolute; /* Positioning within the parent container */
+  width: 100%;
+  height: 100%;
 }
 
 /* Shape positioned at the bottom */
-.shape {
+.shape1 {
   position: absolute;
-  bottom: 30px; /* Pushes the shape slightly below the bottom of the div */
-  left: 50%; /* Centers horizontally */
-  transform: translateX(-50%); /* Ensures horizontal centering */
+  bottom: 1%; /* Pushes the shape slightly below the bottom of the div */
+  left: 2%; /* Centers horizontally */
   width: 80px; /* Set the size of the shape */
   height: 80px; /* Set the size of the shape */
-  background-color: #BF1633; /* Example color, can be changed */
+  transform: rotate(10deg); /* Rotates the shape by 10 degrees */
 }
 
+/* Shape positioned at the bottom */
+.shape2 {
+  position: absolute;
+  bottom: 5%; /* Pushes the shape slightly below the bottom of the div */
+  left: 43%; /* Centers horizontally */
+  width: 100px; /* Set the size of the shape */
+  height: 100px; /* Set the size of the shape */
+  transform: rotate(-10deg); /* Rotates the shape by 10 degrees */
+}
+
+/* Shape positioned at the bottom */
+.shape3 {
+  position: absolute;
+  bottom: 0%; /* Pushes the shape slightly below the bottom of the div */
+  left: 77%; /* Centers horizontally */
+  width: 200px; /* Set the size of the shape */
+  height: 200px; /* Set the size of the shape */
+  transform: rotate(-90deg); /* Rotates the shape by 10 degrees */
+}
+/* Shape positioned at the bottom */
+.shape4 {
+  position: absolute;
+  bottom: 12%; /* Pushes the shape slightly below the bottom of the div */
+  left: 82%; /* Centers horizontally */
+  width: 50px; /* Set the size of the shape */
+  height: 50px; /* Set the size of the shape */
+  transform: rotate(-80deg); /* Rotates the shape by 10 degrees */
+}
