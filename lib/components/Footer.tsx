@@ -5,7 +5,9 @@ export default function Footer() {
   return (
     <footer>
       <p>
-      ex2 by liora vesnovaty<AuthAction /> | {COURSE_CREDITS}
+      ex2 by Liora Vesnovaty<br/>
+      design-to-code designed by Noga Aloni<br/>
+      <AuthAction /> {COURSE_CREDITS}
       </p>
     </footer>
   );

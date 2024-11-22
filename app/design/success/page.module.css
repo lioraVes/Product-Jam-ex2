@@ -81,60 +81,33 @@
 
 /* Individual animation for each layer */
 .layer1 {
-  animation: rotate1 50s linear infinite;
+  animation: rotate 2s linear infinite alternate;
   height: 90%;
 }
 
 .layer2 {
-  animation: rotate2 50s linear infinite;
+  animation: rotate 2s linear infinite alternate-reverse;
   height: 85%;
 }
 
 .layer3 {
-  animation: rotate3 50s linear infinite;
+  animation: rotate 2s linear infinite alternate;
   height: 85%;
 
 }
 
 .layer4 {
-  animation: rotate4 50s linear infinite; /* New animation for the 4th shape */
   height: 30%;
 
 }
 
 /* Keyframes for rotation */
-@keyframes rotate1 {
+@keyframes rotate {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(90deg);
   }
 }
 
-@keyframes rotate2 {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(-360deg); /* Rotate in the opposite direction */
-  }
-}
-
-@keyframes rotate3 {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-@keyframes rotate4 {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(-360deg); /* Rotate in the opposite direction */
-  }
-}
