@@ -19,12 +19,11 @@
   margin-bottom: 20px; /* Add spacing between sections */
 }
 
-.text, .login {
+.text, .loginText {
   max-width: 254px; /* Limit the width of the text */
   width: 100%; /* Ensure it doesn't exceed the parent's width */
   text-align: center; /* Center the text within the div */
   font-size: 14px;
-
 }
 
 .welcome{
@@ -33,4 +32,150 @@
 
 .intro{
   font-size: 14px;
+}
+
+.loginForm {
+  max-width: 20rem; /* Or whatever width you prefer */
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.loginForm input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center; /* Center text and placeholder */
+  border: 2px solid #BF1633; /* Add a red border */
+  border-radius: 1rem; /* Rounded corners */
+  background-color: black; /* Set background color */
+  color: white; /* Set text color */
+  transition: background-color 0.4s ease; /* Smooth transition for background change */
+
+}
+.loginForm input:focus {
+  background-color: white; /* Change background to white when focused */
+  color: black; /* Change text color to black for better contrast */
+  outline: none; /* Remove default outline */
+  border: 2px solid red; /* Optional: change border color to red when focused */
+}
+
+.loginForm input::placeholder {
+  text-align: center; /* Center the placeholder text */
+  color: #888; /* Optional: Change placeholder color */
+}
+
+.loginForm button{
+  background-color: #BF1633; /* Set the background color to red */
+  color: white; /* Set the text color to white */
+  padding: 0.5rem;
+  border: none; /* Remove the default border */
+  border-radius: 1rem; /* Optional: rounded corners */
+  cursor: pointer; /* Change the cursor to a pointer when hovering */
+  transition: background-color 0.4s ease; /* Smooth transition on hover */
+}
+.loginForm button:hover {
+  background-color: rgb(135, 17, 17); /* Darker red on hover */
+}
+
+.loginForm a{
+  color:#BF1633;
+  text-decoration: underline;
+  cursor: pointer; /* Change the cursor to a pointer when hovering */
+
+}
+
+.movingShapes {
+  position: absolute; /* Positioning within the parent container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent the shapes from interfering with clicks */
+  overflow: hidden; /* Prevent the shapes from spilling over the content */
+}
+
+.shape1, .shape2, .shape3, .shape4 {
+  position: absolute;
+  width: 80px; /* Set the shape size */
+  height: 80px;
+  z-index: 0;
+}
+
+/* Shape 1 - Top left */
+.shape1 {
+  top: 10%;
+  left: 5%;
+  animation: moveShape1 3s ease-in-out infinite;
+}
+
+/* Shape 2 - Top right */
+.shape2 {
+  top: 10%;
+  right: 5%;
+  animation: moveShape2 4s ease-in-out infinite;
+}
+
+/* Shape 3 - Bottom left */
+.shape3 {
+  bottom: 10%;
+  left: 10%;
+  animation: moveShape3 5s ease-in-out infinite;
+}
+
+/* Shape 4 - Bottom right */
+.shape4 {
+  bottom: 10%;
+  right: 10%;
+  animation: moveShape4 6s ease-in-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes moveShape1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveShape2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-30px, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveShape3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveShape4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(25px, -25px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
