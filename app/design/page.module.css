@@ -13,6 +13,8 @@
   direction: rtl; /* Set the text direction to right-to-left */
   color: white;
   padding: 20px; /* Add padding to prevent overflow on smaller screens */
+  position: relative; /* Ensure this is positioned relative to its children */
+
 }
 
 .hey {
@@ -52,7 +54,7 @@
   background-color: black; /* Set background color */
   color: white; /* Set text color */
   transition: background-color 0.4s ease; /* Smooth transition for background change */
-
+  direction: ltr; /* Set the text direction to right-to-left */
 }
 .loginForm input:focus {
   background-color: white; /* Change background to white when focused */
@@ -65,7 +67,10 @@
   text-align: center; /* Center the placeholder text */
   color: #888; /* Optional: Change placeholder color */
 }
-
+.loginForm input:invalid {
+  border: 2px solid red;
+  background-color: rgba(191, 22, 51, 0.52);
+}
 .loginForm button{
   background-color: #BF1633; /* Set the background color to red */
   color: white; /* Set the text color to white */
@@ -86,6 +91,7 @@
 
 }
 
+
 .movingShapes {
   position: absolute; /* Positioning within the parent container */
   top: 0;
@@ -94,9 +100,10 @@
   height: 100%;
   pointer-events: none; /* Prevent the shapes from interfering with clicks */
   overflow: hidden; /* Prevent the shapes from spilling over the content */
+
 }
 
-.shape1, .shape2, .shape3, .shape4 {
+.shape1, .shape2, .shape3, .shape4 ,.shape5, .shape6 {
   position: absolute;
   width: 80px; /* Set the shape size */
   height: 80px;
@@ -106,76 +113,78 @@
 /* Shape 1 - Top left */
 .shape1 {
   top: 10%;
-  left: 5%;
-  animation: moveShape1 3s ease-in-out infinite;
+  left: 20%;
+  animation: moveAndGrow 3s ease-in-out infinite;
+}
+.shape2{
+  top: 50%;
+  left: 25%;
+  animation: moveAndGrow 3s ease-in-out infinite;
+}
+.shape3{
+  top: 80%;
+  left: 15%;
+  animation: moveAndGrow 3s ease-in-out infinite;
+}
+.shape4{
+  top: 80%;
+  left: 80%;
+  animation: moveAndGrow 3s ease-in-out infinite;
 }
 
-/* Shape 2 - Top right */
-.shape2 {
-  top: 10%;
-  right: 5%;
-  animation: moveShape2 4s ease-in-out infinite;
+.shape5{
+  top: 7vh;
+  left: 70vw;
+  width: 170px; 
+  height: 170px;
+  animation: moveAndGrow 3s ease-in-out infinite;
+
 }
 
-/* Shape 3 - Bottom left */
-.shape3 {
-  bottom: 10%;
-  left: 10%;
-  animation: moveShape3 5s ease-in-out infinite;
+.shape6{
+  top:15vh;
+  left: 73.5vw;
+  width:70px; 
+  height: 70px;
+  animation: moveAndGrowOpposite 3s ease-in-out infinite;
+
 }
 
-/* Shape 4 - Bottom right */
-.shape4 {
-  bottom: 10%;
-  right: 10%;
-  animation: moveShape4 6s ease-in-out infinite;
-}
 
-/* Keyframe Animations */
-@keyframes moveShape1 {
+/* Keyframe animation for rotating, growing/shrinking, and moving horizontally */
+@keyframes moveAndGrow {
   0% {
-    transform: translate(0, 0);
+    transform: rotate(0deg) scale(1) ; /* No movement, original size */
+  }
+  25% {
+    transform: rotate(90deg) scale(1.2) ; /* Move right and grow */
   }
   50% {
-    transform: translate(30px, 30px);
+    transform: rotate(180deg) scale(1) ; /* Move right and return to original size */
+  }
+  75% {
+    transform: rotate(270deg) scale(0.8); /* Move right and shrink */
   }
   100% {
-    transform: translate(0, 0);
+    transform: rotate(360deg) scale(1) ; /* Move back to the original position */
   }
 }
 
-@keyframes moveShape2 {
+/* Keyframe animation for rotating, growing/shrinking, and moving horizontally */
+@keyframes moveAndGrowOpposite {
   0% {
-    transform: translate(0, 0);
+    transform: rotate(360deg) scale(1) ; /* No movement, original size */
+  }
+  25% {
+    transform: rotate(270deg) scale(1.2) ; /* Move right and grow */
   }
   50% {
-    transform: translate(-30px, 30px);
+    transform: rotate(180deg) scale(1) ; /* Move right and return to original size */
+  }
+  75% {
+    transform: rotate(90deg) scale(0.8); /* Move right and shrink */
   }
   100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes moveShape3 {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-20px, -20px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes moveShape4 {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(25px, -25px);
-  }
-  100% {
-    transform: translate(0, 0);
+    transform: rotate(0deg) scale(1) ; /* Move back to the original position */
   }
 }

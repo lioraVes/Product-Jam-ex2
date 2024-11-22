@@ -17,6 +17,7 @@ export default function Navbar() {
         <Link href ="/nasa">Nasa API</Link>
         <Link href ="/design">Design to Code</Link>
         <Link href ="/login">login</Link>
+        <Link href="/design/failure">Failure</Link>
       </nav>
     </header>
   );

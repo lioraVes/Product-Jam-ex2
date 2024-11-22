@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bebas+Neue&family=Comfortaa:wght@700&family=Faculty+Glyphic&family=Fredoka:wght@300..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.designContent {
+  font-family: 'Assistant', sans-serif; /* Set Assistant as the font */
+
+  background-color: black; /* Set the background color */
+  min-height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column;
+  align-items: center; /* Center all child elements horizontally */
+  justify-content: center; /* Center all child elements vertically */
+  text-align: center; 
+  direction: rtl; /* Set the text direction to right-to-left */
+  color: white;
+  padding: 20px; /* Add padding to prevent overflow on smaller screens */
+  
+}
+
+.hey {
+  margin-bottom: 20px; /* Add spacing between sections */
+}
+
+.text, .loginText {
+  max-width: 254px; /* Limit the width of the text */
+  width: 100%; /* Ensure it doesn't exceed the parent's width */
+  text-align: center; /* Center the text within the div */
+  font-size: 14px;
+}
+
+
+.designContent button{
+  background-color: #BF1633; /* Set the background color to red */
+  max-width: 20rem; /* Or whatever width you prefer */
+  margin: auto;
+  color: white; /* Set the text color to white */
+  padding: 0.7rem;
+  border: none; /* Remove the default border */
+  border-radius: 1rem; /* Optional: rounded corners */
+  cursor: pointer; /* Change the cursor to a pointer when hovering */
+  transition: background-color 0.4s ease; /* Smooth transition on hover */
+}
+.designContent button:hover {
+  background-color: rgb(135, 17, 17); /* Darker red on hover */
+}
+
+
+/* Container for SVGs */
+.svg-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto; /* Center the container */
+  overflow: hidden;
+}
+
+/* Container for SVGs */
+.svgContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto; /* Center the container */
+  overflow: hidden;
+}
+
+/* Container for SVGs */
+.svgContainer {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  margin: 0 auto; /* Center the container */
+  overflow: hidden;
+}
+
+/* Shared styles for all SVG layers */
+.svgLayer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Individual animation for each layer */
+.layer1 {
+  animation: rotate1 50s linear infinite;
+  height: 90%;
+}
+
+.layer2 {
+  animation: rotate2 50s linear infinite;
+  height: 85%;
+}
+
+.layer3 {
+  animation: rotate3 50s linear infinite;
+  height: 85%;
+
+}
+
+.layer4 {
+  animation: rotate4 50s linear infinite; /* New animation for the 4th shape */
+  height: 30%;
+
+}
+
+/* Keyframes for rotation */
+@keyframes rotate1 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg); /* Rotate in the opposite direction */
+  }
+}
+
+@keyframes rotate3 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate4 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg); /* Rotate in the opposite direction */
+  }
+}
