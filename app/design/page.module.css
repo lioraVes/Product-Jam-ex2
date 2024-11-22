@@ -67,10 +67,18 @@
   text-align: center; /* Center the placeholder text */
   color: #888; /* Optional: Change placeholder color */
 }
-.loginForm input:invalid {
+/* .loginForm input:invalid {
+  border: 2px solid red;
+  background-color: rgba(191, 22, 51, 0.52);
+} */
+/* Add styles for touched invalid inputs */
+.emailTouched:invalid,
+.passwordTouched:invalid {
   border: 2px solid red;
   background-color: rgba(191, 22, 51, 0.52);
 }
+
+
 .loginForm button{
   background-color: #BF1633; /* Set the background color to red */
   color: white; /* Set the text color to white */
