@@ -24,7 +24,7 @@ export default function Home() {
           </li>
           <li>
             Part 3 - <Link href="/design">Design to Code</Link>:
-            <p>A design-to-code project with a login, success, and failure page, designed by Noga Aloni.<br/>
+            <p>A design-to-code section with a login, success, and failure page, designed by Noga Aloni.<br/>
               Includes animations to enhance the user experience.<br/>
               While not connected to a database, the failure page is accessible via the navbar.
             </p>
