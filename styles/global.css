@@ -231,3 +231,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+ul li p {
+  margin: 0;
+  padding: 5px 0 10px; /* Adjust spacing as needed */
+  color: #555; /* Optional: Change text color */
+  font-size: 0.9rem; /* Optional: Adjust font size */
+}
