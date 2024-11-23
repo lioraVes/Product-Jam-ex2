@@ -1,155 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bebas+Neue&family=Comfortaa:wght@700&family=Faculty+Glyphic&family=Fredoka:wght@300..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 .designContent {
-  font-family: 'Assistant', sans-serif; /* Set Assistant as the font */
-
-  background-color: black;  
-  min-height: 100vh; 
+  font-family: "Blender Light", serif;
+  position: relative; /* Ensure this is positioned relative to its children */
+  padding: 20px;
   display: flex; 
   flex-direction: column;
   align-items: center; 
   justify-content: center; 
   text-align: center; 
   direction: rtl; 
+  min-height: 100vh; 
+  background-color: black;  
   color: white;
-  padding: 20px; 
-  position: relative; /* Ensure this is positioned relative to its children */
   z-index: 0; 
 }
 
 .hey {
-  margin-bottom: 20px; /* Add spacing between sections */
+  font-family: "Blender Black", serif;
+
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 20px;
 }
 
 .text, .loginText {
-  max-width: 254px; /* Limit the width of the text */
+  max-width: 254px; 
   width: 100%; /* Ensure it doesn't exceed the parent's width */
-  text-align: center; /* Center the text within the div */
+  text-align: center; 
   font-size: 14px;
 }
 
 .welcome{
+  font-family: "Blender Regular", serif;
+
   font-size: 16px;
+  font-weight: 400;
 }
 
 .intro{
-  font-size: 14px;
+  font-family: "Blender Light", serif;
+
+  font-weight: 300;
 }
 
 .loginForm {
-  max-width: 20rem; /* Or whatever width you prefer */
-  margin: auto;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
+  margin: auto;
+  padding: 1rem;
   gap: 1rem;
-  z-index: 1; /* Ensure the form is interactable */
-
+  z-index: 1;
 }
 
 .loginForm input {
-  padding: 0.5rem;
-  font-size: 1rem;
-  text-align: center; /* Center text and placeholder */
-  border: 2px solid #BF1633; /* Add a red border */
-  border-radius: 1rem; /* Rounded corners */
-  background-color: black; /* Set background color */
-  color: white; /* Set text color */
-  transition: background-color 0.4s ease; /* Smooth transition for background change */
-  direction: ltr; /* Set the text direction to right-to-left */
+  padding-top: 5px;
+  padding-right: 19px;
+  padding-bottom: 5px;
+  padding-left: 19px;
+
+  font-size: 12px;
+  text-align: center;
+  border: 2px solid #BF1633; 
+  border-radius: 13px; 
+  background-color: black; 
+  color: white; 
+  transition: background-color 0.4s ease; 
+  direction: ltr;
 }
+
 .loginForm input:focus {
-  background-color: white; /* Change background to white when focused */
-  color: black; /* Change text color to black for better contrast */
-  outline: none; /* Remove default outline */
-  border: 2px solid red; /* Optional: change border color to red when focused */
+  background-color: white; 
+  color: black; 
+  outline: none; 
 }
 
 .loginForm input::placeholder {
-  text-align: center; /* Center the placeholder text */
-  color: #888; /* Optional: Change placeholder color */
-}
-/* .loginForm input:invalid {
-  border: 2px solid red;
-  background-color: rgba(191, 22, 51, 0.52);
-} */
-/* Add styles for touched invalid inputs */
-.emailTouched:invalid,
-.passwordTouched:invalid {
-  border: 2px solid red;
-  background-color: rgba(191, 22, 51, 0.52);
+  text-align: center; 
+  color: white;
 }
 
+.loginForm input.emailInValid {
+  background-color: rgba(191, 22, 51, 0.52);
+}
 
 .loginForm button{
-  background-color: #BF1633; /* Set the background color to red */
-  color: white; /* Set the text color to white */
-  padding: 0.5rem;
-  border: none; /* Remove the default border */
-  border-radius: 1rem; /* Optional: rounded corners */
-  cursor: pointer; /* Change the cursor to a pointer when hovering */
-  transition: background-color 0.4s ease; /* Smooth transition on hover */
+  padding-top: 4px;
+  padding-right: 22px;
+  padding-bottom: 4px;
+  padding-left: 22px;
+
+  background-color: #BF1633; 
+  color: white; 
+  border: none; 
+  border-radius: 13px; 
+  font-size: 12px;
+
+  cursor: pointer; 
+  transition: background-color 0.4s ease; 
 }
+
 .loginForm button:hover {
-  background-color: rgb(135, 17, 17); /* Darker red on hover */
+  background-color: rgb(135, 17, 17); 
 }
 
 .loginForm a{
   color:#BF1633;
   text-decoration: underline;
-  cursor: pointer; /* Change the cursor to a pointer when hovering */
-
+  cursor: pointer; 
 }
-
 
 .movingShapes {
   position: absolute; /* Positioning within the parent container */
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none; /* Prevent the shapes from interfering with clicks */
-  overflow: hidden; /* Prevent the shapes from spilling over the content */
-  z-index: -1; /* Ensure it stays behind interactive elements */
-
+  overflow: hidden; 
+  z-index: -1; 
 }
 
 .shape1, .shape2, .shape3, .shape4 ,.shape5, .shape6 {
   position: absolute;
-  width: 80px; /* Set the shape size */
+  width: 80px;
   height: 80px;
 }
 
-/* Shape 1 - Top left */
 .shape1 {
   top: 10vh;
   left: 20vw;
   animation: moveAndGrow 3s ease-in-out infinite;
 }
+
 .shape2{
   top: 50vh;
   left: 23vw;
   animation: moveAndGrow 3s ease-in-out infinite;
 }
+
 .shape3{
   top: 80vh;
   left: 15vw;
   animation: moveAndGrow 3s ease-in-out infinite;
 }
+
 .shape4{
   top: 80vh;
   left: 70vw;
   animation: moveAndGrow 3s ease-in-out infinite;
 }
+
 .shapeonshapecontainer{
-  position: absolute; /* Allows positioning relative to the page */
-  top: 15%; /* Adjust this value for vertical placement */
-  right: 20%; /* Adjust this value for horizontal placement */
+  position: absolute;
+  top: 15%;
+  right: 20%; 
   display: flex;
   left: 70%;
   align-items: center;
   justify-content: center;
-  pointer-events: none; /* Disable all pointer events for the shapes */
+  pointer-events: none;
 
 }
 
@@ -167,40 +173,39 @@
 }
 
 
-/* Keyframe animation for rotating, growing/shrinking, and moving horizontally */
+
 @keyframes moveAndGrow {
   0% {
-    transform: rotate(0deg) scale(1) ; /* No movement, original size */
+    transform: rotate(0deg) scale(1) ;
   }
   25% {
-    transform: rotate(90deg) scale(1.2) ; /* Move right and grow */
+    transform: rotate(90deg) scale(1.2) ; 
   }
   50% {
-    transform: rotate(180deg) scale(1) ; /* Move right and return to original size */
+    transform: rotate(180deg) scale(1) ; 
   }
   75% {
-    transform: rotate(270deg) scale(0.8); /* Move right and shrink */
+    transform: rotate(270deg) scale(0.8);
   }
   100% {
-    transform: rotate(360deg) scale(1) ; /* Move back to the original position */
+    transform: rotate(360deg) scale(1) ; 
   }
 }
 
-/* Keyframe animation for rotating, growing/shrinking, and moving horizontally */
 @keyframes moveAndGrowOpposite {
   0% {
-    transform: rotate(360deg) scale(1) ; /* No movement, original size */
+    transform: rotate(360deg) scale(1) ;
   }
   25% {
-    transform: rotate(270deg) scale(1.2) ; /* Move right and grow */
+    transform: rotate(270deg) scale(1.2) ; 
   }
   50% {
-    transform: rotate(180deg) scale(1) ; /* Move right and return to original size */
+    transform: rotate(180deg) scale(1) ; 
   }
   75% {
-    transform: rotate(90deg) scale(0.8); /* Move right and shrink */
+    transform: rotate(90deg) scale(0.8); 
   }
   100% {
-    transform: rotate(0deg) scale(1) ; /* Move back to the original position */
+    transform: rotate(0deg) scale(1) ;
   }
 }

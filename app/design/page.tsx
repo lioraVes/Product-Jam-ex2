@@ -7,9 +7,7 @@ import { useState } from "react";
 export default function Design() {
   const router = useRouter(); 
 
-  const [emailTouched, setEmailTouched] = useState(false);
-  const [passwordTouched, setPasswordTouched] = useState(false);
-
+  const [emailClass, setEmailClass] = useState(""); 
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent form submission
@@ -17,33 +15,32 @@ export default function Design() {
     const passwordInput = event.currentTarget.password;
 
     const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
 
     // Basic email validation regex
     const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
     if (!emailIsValid) {
+      // console.log("Invalid email. Applying invalid class.");
+      setEmailClass(styles.emailInValid); // Apply invalid style
       emailInput.placeholder = ":( אימייל לא תקין";
       emailInput.value = ""; 
       passwordInput.value = ""; 
       return;
     }
-
-    if (password.length === 0) {
-      passwordInput.placeholder = "Password required";
-      passwordInput.value = "";  
-      emailInput.value = ""; 
-      return;
-    }
+    // console.log("Valid email. Proceeding to success page.");
 
     // If all validations pass, redirect to the success page
     router.push("/design/success");
   };
 
+  const handleEmailChange = () => {
+    setEmailClass(""); // Reset class when user starts typing
+  };
+
   return (
     <div className={styles.designContent}>
       <div className={styles.hey}>
-        <h1>היי!</h1>
+        היי!
       </div>
       <div className={styles.text}>
         <div className={styles.welcome}>
@@ -73,15 +70,15 @@ export default function Design() {
       <div>
         <form className={styles.loginForm} onSubmit={handleSubmit}>
           <label htmlFor="email">
-            <input name="email" placeholder="אימייל" onBlur={() => setEmailTouched(true)} 
-              className={emailTouched ? styles.emailTouched : ""} required/>
+            <input name="email" placeholder="אימייל" className={emailClass} onChange={handleEmailChange} required/>
           </label>
 
           <label htmlFor="password">
-            <input type="password" name="password" placeholder="סיסמה" onBlur={() => setPasswordTouched(true)}
-              className={passwordTouched ? styles.passwordTouched : ""} required />
+            <input type="password" name="password" placeholder="סיסמה" required />
           </label>
+
           <a> כבר יש לי חשבון</a>
+          
           <button>בואו נתחיל!</button>
         </form>
       </div>

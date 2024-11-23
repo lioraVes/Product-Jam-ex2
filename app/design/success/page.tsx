@@ -1,17 +1,12 @@
 "use client"; // Mark this file as a Client Component
 
 import styles from "./page.module.css";
-import { createClient } from "@/lib/supabase/server";
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
-import { useState } from "react";
-
 
 export default function Success({searchParams,}: {searchParams: { message: string };}) {
     return ( 
     <div className={styles.designContent}>
       <div className={styles.hey}> 
-        <h1> את.ה בפנים!</h1>
+         את.ה בפנים!
       </div>
       <div className={styles.svgContainer}>
         <img src="/blueShape.svg" className={`${styles.svgLayer} ${styles.layer1}`} alt="shape 1" />

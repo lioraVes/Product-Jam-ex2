@@ -1,31 +1,37 @@
 .designContent {
-  font-family: 'Assistant', sans-serif;
-  background-color: black;
-  min-height: 100vh;
+  font-family: 'Blender Regular', sans-serif; 
+  position: relative;
+  padding: 20px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   direction: rtl;
+  min-height: 100vh;
+  background-color: black;
   color: white;
-  padding: 10px; /* Reduce padding */
-  position: relative; /* Ensures the shapes stay relative to this container */
-
 }
 
 .hey {
-  margin-bottom: 10px; /* Reduce space between text and button */
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .designContent button {
+  padding-top: 4px;
+  padding-right: 22px;
+  padding-bottom: 4px;
+  padding-left: 22px;
+
+  border-radius:13px;
+  font-size: 12px;
+
   background-color: #BF1633;
-  max-width: 20rem;
-  margin: 10px auto; /* Reduce margin to bring the button closer */
   color: white;
-  padding: 0.7rem;
   border: none;
-  border-radius: 1rem;
+
   cursor: pointer;
   transition: background-color 0.4s ease;
 }
@@ -34,52 +40,47 @@
   background-color: rgb(135, 17, 17);
 }
 
-
-
 /* Shapes container */
 .shapesContainer {
-  position: absolute; /* Positioning within the parent container */
+  position: absolute; 
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Disable all pointer events for the shapes */
-
+  pointer-events: none;
 }
 
-/* Shape positioned at the bottom */
 .shape1 {
   position: absolute;
-  bottom: 1%; /* Pushes the shape slightly below the bottom of the div */
-  left: 2%; /* Centers horizontally */
-  width: 80px; /* Set the size of the shape */
-  height: 80px; /* Set the size of the shape */
-  transform: rotate(10deg); /* Rotates the shape by 10 degrees */
+  bottom: 1%;
+  left: 2%; 
+  width: 80px; 
+  height: 80px; 
+  transform: rotate(10deg);
 }
 
-/* Shape positioned at the bottom */
+
 .shape2 {
   position: absolute;
-  bottom: 5%; /* Pushes the shape slightly below the bottom of the div */
-  left: 43%; /* Centers horizontally */
-  width: 100px; /* Set the size of the shape */
-  height: 100px; /* Set the size of the shape */
-  transform: rotate(-10deg); /* Rotates the shape by 10 degrees */
+  bottom: 5%; 
+  left: 46%;
+  width: 100px;
+  height: 100px; 
+  transform: rotate(-10deg); 
 }
 
-/* Shape positioned at the bottom */
 .shape3 {
   position: absolute;
-  bottom: 0%; /* Pushes the shape slightly below the bottom of the div */
-  left: 77%; /* Centers horizontally */
-  width: 200px; /* Set the size of the shape */
-  height: 200px; /* Set the size of the shape */
-  transform: rotate(-90deg); /* Rotates the shape by 10 degrees */
+  bottom: 0%; 
+  left: 77%; 
+  width: 200px;
+  height: 200px; 
+  transform: rotate(-90deg); 
 }
-/* Shape positioned at the bottom */
+
 .shape4 {
   position: absolute;
-  bottom: 12%; /* Pushes the shape slightly below the bottom of the div */
-  left: 82%; /* Centers horizontally */
-  width: 50px; /* Set the size of the shape */
-  height: 50px; /* Set the size of the shape */
-  transform: rotate(-80deg); /* Rotates the shape by 10 degrees */
+  bottom: 13%; 
+  left: 82.7%; 
+  width: 50px; 
+  height: 50px; 
+  transform: rotate(-120deg); 
 }

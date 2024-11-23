@@ -1,73 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bebas+Neue&family=Comfortaa:wght@700&family=Faculty+Glyphic&family=Fredoka:wght@300..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 .designContent {
-  font-family: 'Assistant', sans-serif; /* Set Assistant as the font */
-
-  background-color: black; /* Set the background color */
-  min-height: 100vh; /* Full viewport height */
-  display: flex; /* Use flexbox for centering */
+  font-family: 'Blender Regular', sans-serif; /* Set Assistant as the font */
+  padding: 20px; 
+  display: flex;
   flex-direction: column;
-  align-items: center; /* Center all child elements horizontally */
-  justify-content: center; /* Center all child elements vertically */
+  align-items: center; 
+  justify-content: center; 
   text-align: center; 
-  direction: rtl; /* Set the text direction to right-to-left */
+  direction: rtl; 
+  min-height: 100vh; 
+  background-color: black; 
   color: white;
-  padding: 20px; /* Add padding to prevent overflow on smaller screens */
-  
 }
 
 .hey {
-  margin-bottom: 20px; /* Add spacing between sections */
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px; 
 }
-
-.text, .loginText {
-  max-width: 254px; /* Limit the width of the text */
-  width: 100%; /* Ensure it doesn't exceed the parent's width */
-  text-align: center; /* Center the text within the div */
-  font-size: 14px;
-}
-
 
 .designContent button{
-  background-color: #BF1633; /* Set the background color to red */
-  max-width: 20rem; /* Or whatever width you prefer */
-  margin: auto;
-  color: white; /* Set the text color to white */
-  padding: 0.7rem;
-  border: none; /* Remove the default border */
-  border-radius: 1rem; /* Optional: rounded corners */
-  cursor: pointer; /* Change the cursor to a pointer when hovering */
-  transition: background-color 0.4s ease; /* Smooth transition on hover */
+  padding-top: 4px;
+  padding-right: 22px;
+  padding-bottom: 4px;
+  padding-left: 22px;
+
+  background-color: #BF1633; 
+  color: white; 
+  border: none; 
+  border-radius: 13px; 
+  font-size: 12px;
+
+  cursor: pointer;
+  transition: background-color 0.4s ease; 
 }
+
 .designContent button:hover {
-  background-color: rgb(135, 17, 17); /* Darker red on hover */
+  background-color: rgb(135, 17, 17); 
 }
 
 
-/* Container for SVGs */
-.svg-container {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto; /* Center the container */
-  overflow: hidden;
-}
-
-/* Container for SVGs */
-.svgContainer {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto; /* Center the container */
-  overflow: hidden;
-}
-
-/* Container for SVGs */
 .svgContainer {
   position: relative;
   width: 25rem;
   height: 25rem;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto; 
   overflow: hidden;
 }
 
@@ -81,17 +58,17 @@
 
 /* Individual animation for each layer */
 .layer1 {
-  animation: rotate 2s linear infinite alternate;
+  animation: rotate 1s linear infinite alternate;
   height: 90%;
 }
 
 .layer2 {
-  animation: rotate 2s linear infinite alternate-reverse;
+  animation: rotate 1s linear infinite alternate-reverse;
   height: 85%;
 }
 
 .layer3 {
-  animation: rotate 2s linear infinite alternate;
+  animation: rotate 1s linear infinite alternate;
   height: 85%;
 
 }
@@ -110,4 +87,3 @@
     transform: translate(-50%, -50%) rotate(90deg);
   }
 }
-
