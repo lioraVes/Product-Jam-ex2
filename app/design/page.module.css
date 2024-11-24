@@ -82,6 +82,17 @@
   background-color: rgba(191, 22, 51, 0.52);
 }
 
+/* More specific autofill styles scoped to .loginForm */
+.loginForm input:-webkit-autofill,
+.loginForm input:-webkit-autofill:hover,
+.loginForm input:-webkit-autofill:focus {
+  background-color: black !important; /* Match your desired background color */
+  color: white !important; /* Match your desired text color */
+  box-shadow: 0 0 0px 1000px black inset !important; /* Override the default autofill background */
+  -webkit-text-fill-color: white !important; /* Ensure text color remains consistent */
+  transition: background-color 5000s ease-in-out 0s; /* Avoid autofill flash */
+}
+
 .loginForm button{
   padding-top: 4px;
   padding-right: 22px;
@@ -126,7 +137,7 @@
 .shape1 {
   top: 10vh;
   left: 20vw;
-  animation: moveAndGrow 3s ease-in-out infinite;
+  animation: moveAndGrowOpposite 3s ease-in-out infinite;
 }
 
 .shape2{
@@ -138,7 +149,7 @@
 .shape3{
   top: 80vh;
   left: 15vw;
-  animation: moveAndGrow 3s ease-in-out infinite;
+  animation: moveAndGrowOpposite 3s ease-in-out infinite;
 }
 
 .shape4{
@@ -168,8 +179,6 @@
   height: 3rem;
   animation: moveAndGrowOpposite 3s ease-in-out infinite;
 }
-
-
 
 @keyframes moveAndGrow {
   0% {
