@@ -111,7 +111,7 @@
 .movingShapes {
   position: absolute; /* Positioning within the parent container */
   width: 100%;
-  height: 100%;
+  height: 100vh;
   pointer-events: none; /* Prevent the shapes from interfering with clicks */
   overflow: hidden; 
   z-index: -1; 
@@ -131,7 +131,7 @@
 
 .shape2{
   top: 50vh;
-  left: 23vw;
+  left: 10vw;
   animation: moveAndGrow 3s ease-in-out infinite;
 }
 
@@ -148,15 +148,13 @@
 }
 
 .shapeonshapecontainer{
-  position: absolute;
+  position: relative;
   top: 15%;
-  right: 20%; 
+  right: -20%; 
   display: flex;
-  left: 70%;
   align-items: center;
   justify-content: center;
   pointer-events: none;
-
 }
 
 .shape5{

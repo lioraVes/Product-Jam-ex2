@@ -41,7 +41,7 @@ export default function Design() {
     <div className={styles.designContent}>
       <div className={styles.hey}>
         היי!
-      </div>
+      </div> <br/>
       <div className={styles.text}>
         <div className={styles.welcome}>
           ברוכימ.ות הבאימ.ות למדריך האישי שלך למוזיאון ישראל בירושלים
