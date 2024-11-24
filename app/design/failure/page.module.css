@@ -51,53 +51,48 @@
 
 .shape1 {
   position: absolute;
-  bottom: -4%; /* Move it below the visible area */
-  left: -3%;
-  width: 80px;
-  height: 80px;
+  bottom: -4%;
+  left: -8%;
+  width: 20vw;
+  height: 20vh;
   transform: rotate(10deg);
-  z-index: 1; /* Ensure it's on top of other elements */
+  z-index: 1;
 }
 
 .shape2 {
   position: absolute;
-  bottom: -3%; /* Move it slightly below the visible area */
+  bottom: -3%; 
   left: 50%;
-  width: 10vw;
-  height: 10vw;
+  width: 28vw;
+  height: 28vh;
   transform: translateX(-50%) rotate(-10deg);
-  z-index: 1; /* Ensure it's on top of other elements */
+  z-index: 1; 
 }
-
 
 .shapeonshapecontainer {
   position: absolute;
-  bottom: -10%; /* Move it slightly below the visible area */
-  left: 80%;
-  /* bottom: 20px;
-  right: 2px; */
+  bottom: -10%; 
+  left: 77%;
   display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  width: 33vw;  
-  height: 33vh; 
-
+  width: 43vw;  
+  height: 43vh; 
 }
 
-.shape5 {
+.shape3 {
   position: relative; /* Make this the relative container */
   width: 100%;  /* Takes up 100% of the .shapeonshapecontainer */
   height: 100%; /* Takes up 100% of the .shapeonshapecontainer */
   
 }
 
-.shape6 {
-  position: absolute;  /* Position relative to .shape5 */
-  width: 30%;  /* 30% of .shape5 */
-  height: 30%; /* 30% of .shape5 */
+.shape4 {
+  position: absolute;  /* Position relative to .shape3 */
+  width: 30%;  /* 30% of .shape3 */
+  height: 30%; /* 30% of .shape3 */
   top: 50%;    /* Center it vertically */
   left: 50%;   /* Center it horizontally */
-  transform: translate(-50%, -50%) rotate(60deg);; /* Align the center of shape 6 within shape 5 */
-
+  transform: translate(-50%, -50%) rotate(60deg);; /* Align the center of shape 4 within shape 3 */
 }

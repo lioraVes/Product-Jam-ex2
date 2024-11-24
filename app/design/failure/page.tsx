@@ -23,13 +23,9 @@ export default function Failure({searchParams,}: {searchParams: { message: strin
        <img src="/greenShape.svg" className={styles.shape1} alt="Shape 1" />
        <img src="/purpleShape.svg" className={styles.shape2} alt="Shape 2" />
        <div className={styles.shapeonshapecontainer}>
-        <img src="/red_new.svg" className={styles.shape5} alt="Shape 5" />
-        <img src="/green_new.svg" className={styles.shape6} alt="Shape 6" /> 
+        <img src="/red_new.svg" className={styles.shape3} alt="Shape 3" />
+        <img src="/green_new.svg" className={styles.shape4} alt="Shape 4" /> 
         </div>
-
-       {/* <img src="/red_new.svg" className={styles.shape3} alt="Shape 3" />
-       <img src="/green_new.svg" className={styles.shape4} alt="Shape 4" />  */}
-
       </div>
     </div>
 
