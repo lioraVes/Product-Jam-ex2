@@ -8,11 +8,6 @@ export default function Navbar() {
         <Link href="/">{APP_NAME}</Link>
       </h1>
       <nav>
-        <Link href="/">Home</Link>
-        {/* <Link href={COURSE_GITHUB} target="_blank">
-          GitHub
-        </Link>
-        {DEMOS_ENABLED ? <Link href="/demos">Demos</Link> : null} */}
         <Link href ="/tic-tac-toe">TicTacToe </Link>
         <Link href ="/nasa">Nasa API</Link>
         <Link href ="/design">Design to Code</Link>
