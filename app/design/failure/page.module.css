@@ -52,8 +52,8 @@
   position: absolute;
   bottom: 1%;
   left: 2%; 
-  width: 80px; 
-  height: 80px; 
+  width: 20vw; /* Width as a percentage of the viewport width */
+  height: 20vh; /* Height as a percentage of the viewport width */
   transform: rotate(10deg);
 }
 
@@ -61,26 +61,36 @@
 .shape2 {
   position: absolute;
   bottom: 5%; 
-  left: 46%;
-  width: 100px;
-  height: 100px; 
+  left: 40%; /* Set the left position to 50% of the container */
+  width: 20vw; /* Width as a percentage of the viewport width */
+  height: 20vh; /* Height as a percentage of the viewport width */
   transform: rotate(-10deg); 
 }
 
-.shape3 {
+
+.shapeonshapecontainer {
   position: absolute;
-  bottom: 0%; 
-  left: 77%; 
-  width: 200px;
-  height: 200px; 
-  transform: rotate(-90deg); 
+  bottom: 20px;
+  right: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  width: 33vw;  
+  height: 33vh; 
 }
 
-.shape4 {
-  position: absolute;
-  bottom: 13%; 
-  left: 82.7%; 
-  width: 50px; 
-  height: 50px; 
-  transform: rotate(-120deg); 
+.shape5 {
+  position: relative; /* Make this the relative container */
+  width: 100%;  /* Takes up 100% of the .shapeonshapecontainer */
+  height: 100%; /* Takes up 100% of the .shapeonshapecontainer */
+}
+
+.shape6 {
+  position: absolute;  /* Position relative to .shape5 */
+  width: 30%;  /* 30% of .shape5 */
+  height: 30%; /* 30% of .shape5 */
+  top: 50%;    /* Center it vertically */
+  left: 50%;   /* Center it horizontally */
+  transform: translate(-50%, -50%); /* Align the center of shape 6 within shape 5 */
 }
